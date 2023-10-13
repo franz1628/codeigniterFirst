@@ -2,6 +2,7 @@
 <html lang="es" data-bs-theme="dark">
 
 <head>
+    <base href="<?php echo base_url()?>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $title ?></title>
@@ -33,7 +34,7 @@
                                 CRUD
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">Brands</a></li>
+                                <li><a class="dropdown-item" href="admin/brand">Brands</a></li>
                                 <li><a class="dropdown-item" href="#">Models</a></li>
                                 <li><a class="dropdown-item" href="#">Vehicules</a></li>
                                 <li><a class="dropdown-item" href="#">Maintenance</a></li>

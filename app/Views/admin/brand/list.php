@@ -18,7 +18,7 @@
                 <td><?= $key; ?></td>
                 <td><?= $value["description"]; ?></td>
                 <td>
-                    <button class="btn btn-info"><i class="bi bi-pencil-square"></i>Edit</button>
+                    <a href="<?='admin/brand/edit/'.$value['id']?>" class="btn btn-info"><i class="bi bi-pencil-square"></i>Edit</a>
                     <button class="btn btn-danger"><i class="bi bi-trash3"></i>Delete</button>
                 </td>
                 </tr>
