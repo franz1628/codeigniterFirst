@@ -1,7 +1,12 @@
 <h1>Brand List</h1>
 <hr>
-
 <div class="row">
+    <div class="col-md-12">
+        <a class="btn btn-info" href="admin/brand/add">Add</a>
+    </div>
+</div>
+
+<div class="row mt-3">
     <div class="col-md-12">
         <table class="table table-bordered">
             <thead>
