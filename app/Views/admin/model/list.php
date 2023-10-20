@@ -2,7 +2,7 @@
 <hr>
 <div class="row">
     <div class="col-md-12">
-        <a class="btn btn-info" href="admin/brand/add">Add</a>
+        <a class="btn btn-info" href="admin/model/add">Add</a>
     </div>
 </div>
 
@@ -13,6 +13,7 @@
                 <tr>
                     <th>#</th>
                     <th>Model</th>
+                    <th>Brand</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -22,6 +23,7 @@
                 <tr>
                 <td><?= $key; ?></td>
                 <td><?= $value["description"]; ?></td>
+                <td><?= $value["b_description"]; ?></td>
                 <td>
                     <a href="<?='admin/model/edit/'.$value['id']?>" class="btn btn-info"><i class="bi bi-pencil-square"></i>Edit</a>
                     <button class="btn btn-danger"><i class="bi bi-trash3"></i>Delete</button>

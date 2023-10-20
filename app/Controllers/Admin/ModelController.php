@@ -16,12 +16,11 @@ class ModelController extends BaseController
 
     public function index()
     {
-        $list = (new ModelModel())->where("state", "1")->findAll();
+        $list = $this->model->getAllModel();
 
         $data = [
             'title' => 'Home',
             'content' => view('admin/model/list', ['list' => $list]),
-
         ];
 
         return view('templates/templateDashboard', $data);

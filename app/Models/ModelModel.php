@@ -13,7 +13,7 @@ class ModelModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['idBrand','description','state'];
 
     // Dates
     protected $useTimestamps = false;
@@ -38,4 +38,13 @@ class ModelModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    public function getAllModel(){
+        $builder = $this->db->table('model m');
+        $builder->join("brand b","b.id = m.idBrand");
+        $builder->select("m.id, m.idBrand, m.description, m.state, b.description b_description");
+        $query = $builder->get();
+
+        return $query->getResultArray();
+    }
 }
