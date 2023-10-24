@@ -28,6 +28,17 @@ class BrandController extends BaseController
         return view('templates/templateDashboard', $data);
     }
 
+    public function create()
+    {
+        $data = [
+            'title' => 'Create',
+            'content' => view('admin/brand/create'),
+
+        ];
+
+        return view('templates/templateDashboard', $data);
+    }
+
     public function add()
     {
         if ($this->request->is('post')) {
@@ -79,7 +90,7 @@ class BrandController extends BaseController
             if ($this->validate($rules)) {
                 $description = $this->request->getPost('description');
 
-                $this->model->update($id,[
+                $this->model->update($id, [
                     "description" => $description
                 ]);
 
@@ -104,7 +115,17 @@ class BrandController extends BaseController
 
             return view('templates/templateDashboard', $data);
         }
+    }
 
-        
+    public function delete($id)
+    {
+        $model = $this->model->find($id);
+
+        if ($model) {
+            $this->model->update($id, ["state" => "0"]);
+        } else {
+           
+        }
+        return redirect()->to('admin/brand');
     }
 }
