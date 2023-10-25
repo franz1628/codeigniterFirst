@@ -23,3 +23,10 @@ $routes->get('/admin/model/add', 'Admin\ModelController::add');
 $routes->post('/admin/model/add', 'Admin\ModelController::add');
 $routes->get('/admin/model/edit/(:num)', 'Admin\ModelController::edit/$1');
 $routes->post('/admin/model/edit/(:num)', 'Admin\ModelController::edit/$1');
+
+$routes->get('/admin/typeDocument', 'Admin\TypeDocumentController::index');
+$routes->get('/admin/typeDocument/add', 'Admin\TypeDocumentController::add');
+$routes->post('/admin/typeDocument/add', 'Admin\TypeDocumentController::add');
+$routes->get('/admin/typeDocument/edit/(:num)', 'Admin\TypeDocumentController::edit/$1');
+$routes->post('/admin/typeDocument/edit/(:num)', 'Admin\TypeDocumentController::edit/$1');
+$routes->get('/admin/typeDocument/delete/(:num)', 'Admin\TypeDocumentController::delete/$1');
