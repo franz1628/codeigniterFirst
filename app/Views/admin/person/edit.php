@@ -24,6 +24,6 @@
 
                 <a class="btn btn-danger" href="admin/typeDocument"><i class="bi bi-backspace"></i> Cancel</a>
             </div>
-        </form>
+        </form> 
     </div>
 </div>
