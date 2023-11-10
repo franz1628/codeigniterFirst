@@ -20,7 +20,7 @@
             <tbody>
                 <?php foreach($list as $key=>$value): ?>
                 <tr>
-                <td><?= $key; ?></td>
+                <td><?= $key+1; ?></td>
                 <td><?= $value["description"]; ?></td>
                 <td>
                     <a href="<?='admin/brand/edit/'.$value['id']?>" class="btn btn-info"><i class="bi bi-pencil-square"></i>Edit</a>
